@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class player : MonoBehaviour
-{
+public class player : MonoBehaviour {
     [SerializeField] private float moveSpeed = 5f;
     private Vector2 rawInput;
 
@@ -16,26 +15,22 @@ public class player : MonoBehaviour
     [SerializeField] float paddingBottom;
 
 
-    void Start()
-    {
+    void Start() {
         InitBounds();
     }
 
     // Update is called once per frame
-    private void Update()
-    {
+    private void Update() {
         Move();
     }
 
-    private void InitBounds()
-    {
+    private void InitBounds() {
         Camera mainCamera = Camera.main;
         minBounds = mainCamera.ViewportToWorldPoint(new Vector2(0, 0));
         maxBounds = mainCamera.ViewportToWorldPoint(new Vector2(1, 1));
     }
 
-    private void Move()
-    {
+    private void Move() {
         Vector2 delta = rawInput * moveSpeed * Time.deltaTime;
         Vector2 newPos = new Vector2();
         newPos.x = Mathf.Clamp(transform.position.x + delta.x, minBounds.x + paddingLeft, maxBounds.x - paddingRight);
@@ -43,9 +38,8 @@ public class player : MonoBehaviour
         transform.position = newPos;
     }
 
-    private void OnMove(InputValue value)
-    {
+    private void OnMove(InputValue value) {
         rawInput = value.Get<Vector2>();
-        Debug.Log(rawInput);
+        Debug.Log(transform.position);
     }
 }
