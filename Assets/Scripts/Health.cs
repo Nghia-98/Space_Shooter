@@ -15,6 +15,10 @@ public class Health : MonoBehaviour {
     AudioPlayer audioPlayer;
     ScoreKeeper scoreKeeper;
 
+    public int GetHealth() {
+        return health;
+    }
+
     void Awake() {
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
