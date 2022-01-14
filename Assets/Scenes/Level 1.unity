@@ -1304,6 +1304,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 173800693, guid: d2885b8fe024316449193f308ae7b271, type: 3}
+      propertyPath: paddingTop
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3522370673329405310, guid: d2885b8fe024316449193f308ae7b271, type: 3}
       propertyPath: m_RootOrder
       value: 2
