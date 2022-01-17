@@ -10,8 +10,11 @@ public class PathFinder : MonoBehaviour {
     List<Transform> waypoints;
     int waypointIndex = 0;
 
+    CountEnemyDestroyed enemiesDestroyed;
+
     void Awake() {
         enemySpawner = FindObjectOfType<EnemySpawner>();
+        enemiesDestroyed = FindObjectOfType<CountEnemyDestroyed>();
     }
 
 
@@ -38,6 +41,7 @@ public class PathFinder : MonoBehaviour {
             }
         }
         else {
+            enemiesDestroyed.increateNumEnemyDestroyed();
             Destroy(gameObject);
         }
     }
