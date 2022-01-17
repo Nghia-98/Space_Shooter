@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour {
     [SerializeField] float sceneLoadDelay = 2f;
     ScoreKeeper scoreKeeper;
 
+    static int currentLevel = 1;
+
     void Awake() {
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
         Debug.Log("scoreKeeper: ", scoreKeeper);
@@ -15,11 +17,18 @@ public class LevelManager : MonoBehaviour {
 
     public void LoadGame() {
         scoreKeeper.ResetScore();
+        currentLevel = 1;
         SceneManager.LoadScene("Level 1");
     }
 
-    public void LoadLevel2() {
-        SceneManager.LoadScene("Level 2");
+    public void LoadLNextLevel() {
+        currentLevel += 1;
+        SceneManager.LoadScene("Level " + currentLevel);
+    }
+
+
+    public void LoadVictory() {
+        SceneManager.LoadScene("Victory");
     }
 
     public void LoadMainMenu() {
@@ -37,6 +46,10 @@ public class LevelManager : MonoBehaviour {
     public void QuitGame() {
         Debug.Log("Quitting Game...");
         Application.Quit();
+    }
+
+    public void ResetCurrentLevel() {
+        currentLevel = 1;
     }
 
     IEnumerator WaitAndLoad(string sceneName, float delay) {

@@ -7,10 +7,12 @@ public class CountEnemyDestroyed : MonoBehaviour {
     EnemySpawner enemySpawner;
     GameObject[] enemyClone;
 
+    [SerializeField] bool isFinalLevel = false;
+
 
     // If number of enemy has been destroyed = max of number enemy spawner
     // => Load GoNextLevel Scene
-    [SerializeField] int maxOfEnemySpawner = 30;
+    [SerializeField] int maxOfEnemySpawner = 20;
     int numOfEnemyDestroyed = 0;
 
     void Awake() {
@@ -42,7 +44,6 @@ public class CountEnemyDestroyed : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         enemyClone = GameObject.FindGameObjectsWithTag("enemyClone");
-        Debug.Log("Enemy Clone: " + enemyClone.Length);
 
         if (numOfEnemyDestroyed >= maxOfEnemySpawner) {
 
@@ -50,7 +51,12 @@ public class CountEnemyDestroyed : MonoBehaviour {
             Debug.Log("Level Completed");
             if (enemyClone.Length == 0) {
                 resetNumEnemyDestroyed();
-                levelManager.LoadNextLevelMenu();
+                if (isFinalLevel) {
+                    levelManager.LoadVictory();
+                }
+                else {
+                    levelManager.LoadNextLevelMenu();
+                }
             }
         }
     }
