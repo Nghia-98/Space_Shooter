@@ -430,7 +430,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEVEL COMPLETED
+  m_text: YOU SAVED THE WORLD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 868a5451200a8774cb8891f1b2a7dffa, type: 2}
   m_sharedMaterial: {fileID: -899740723683530449, guid: 868a5451200a8774cb8891f1b2a7dffa, type: 2}
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GO NEXT ?
+  m_text: PLAY AGAIN ?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 170117666bef85547890352d3aec70dc, type: 2}
   m_sharedMaterial: {fileID: -899740723683530449, guid: 170117666bef85547890352d3aec70dc, type: 2}
@@ -927,7 +927,7 @@ GameObject:
   - component: {fileID: 1391024784}
   - component: {fileID: 1391024783}
   m_Layer: 5
-  m_Name: GoNextLevel
+  m_Name: PlayAgain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -999,7 +999,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2014459895}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadLNextLevel
+        m_MethodName: LoadGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
