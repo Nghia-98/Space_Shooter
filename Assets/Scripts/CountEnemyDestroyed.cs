@@ -11,7 +11,7 @@ public class CountEnemyDestroyed : MonoBehaviour {
     // If number of enemy has been destroyed = max of number enemy spawner
     // => Load GoNextLevel Scene
     [SerializeField] int maxOfEnemySpawner = 30;
-    static int numOfEnemyDestroyed = 0;
+    int numOfEnemyDestroyed = 0;
 
     void Awake() {
         levelManager = FindObjectOfType<LevelManager>();
@@ -26,6 +26,12 @@ public class CountEnemyDestroyed : MonoBehaviour {
         if (numOfEnemyDestroyed == maxOfEnemySpawner) {
             enemySpawner.StopAllCoroutines();
         }
+    }
+
+    public void resetNumEnemyDestroyed() {
+        numOfEnemyDestroyed = 0;
+
+        Debug.Log("Enemies Destroyed Rest: " + numOfEnemyDestroyed);
     }
 
     // Start is called before the first frame update
@@ -43,6 +49,7 @@ public class CountEnemyDestroyed : MonoBehaviour {
 
             Debug.Log("Level Completed");
             if (enemyClone.Length == 0) {
+                resetNumEnemyDestroyed();
                 levelManager.LoadNextLevelMenu();
             }
         }

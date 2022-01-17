@@ -958,8 +958,6 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 543ef373fb3d64e4d84edaaf66dbaf70, type: 2}
   - {fileID: 11400000, guid: b4533cb51e275dc42b587e84c17de3c1, type: 2}
-  - {fileID: 11400000, guid: b129e50f1a5937d4dbb5908e91d85fc4, type: 2}
-  - {fileID: 11400000, guid: f11dad7d365637346aaa40f3d250239c, type: 2}
   timeBetweenWaves: 1.5
   isLooping: 1
 --- !u!4 &1711394358
@@ -1182,10 +1180,6 @@ PrefabInstance:
     - target: {fileID: 7934088921520657944, guid: d4d95051d7560a74dba769da06838d28, type: 3}
       propertyPath: m_Name
       value: CountEnemyDestroyed
-      objectReference: {fileID: 0}
-    - target: {fileID: 8245209059392552119, guid: d4d95051d7560a74dba769da06838d28, type: 3}
-      propertyPath: maxOfEnemySpawner
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4d95051d7560a74dba769da06838d28, type: 3}

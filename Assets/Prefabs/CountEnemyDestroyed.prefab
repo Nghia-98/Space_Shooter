@@ -43,3 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d64270ff57f4db44ae8791bc7a01496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxOfEnemySpawner: 30
