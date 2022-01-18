@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour {
 
 
     public void LoadVictory() {
-        SceneManager.LoadScene("Victory");
+        StartCoroutine(WaitAndLoad("Victory", 3));
     }
 
     public void LoadMainMenu() {
