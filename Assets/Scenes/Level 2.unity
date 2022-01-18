@@ -1185,7 +1185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8245209059392552119, guid: d4d95051d7560a74dba769da06838d28, type: 3}
       propertyPath: maxOfEnemySpawner
-      value: 25
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4d95051d7560a74dba769da06838d28, type: 3}
@@ -1367,10 +1367,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 173800693, guid: d2885b8fe024316449193f308ae7b271, type: 3}
-      propertyPath: paddingTop
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 3522370673329405310, guid: d2885b8fe024316449193f308ae7b271, type: 3}
       propertyPath: m_RootOrder
       value: 2
