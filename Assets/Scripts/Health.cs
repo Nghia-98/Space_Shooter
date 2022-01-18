@@ -63,7 +63,6 @@ public class Health : MonoBehaviour {
             ParticleSystem instance = Instantiate(hitEffect, transform.position, Quaternion.identity);
             Destroy(instance.gameObject, instance.main.duration + instance.main.startLifetime.constantMax);
         }
-
     }
 
     void ShakeCamera() {

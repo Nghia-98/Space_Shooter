@@ -16,6 +16,9 @@ MonoBehaviour:
   - {fileID: 4999268336617910825, guid: bdf4863b0e39abb41b5f135de1a82866, type: 3}
   - {fileID: 3131394106406493218, guid: cdaa6d41948dedb4cb4766f63ada989f, type: 3}
   - {fileID: 4999268336617910825, guid: bdf4863b0e39abb41b5f135de1a82866, type: 3}
+  - {fileID: 3131394106406493218, guid: cdaa6d41948dedb4cb4766f63ada989f, type: 3}
+  - {fileID: 4999268336617910825, guid: bdf4863b0e39abb41b5f135de1a82866, type: 3}
+  - {fileID: 3131394106406493218, guid: cdaa6d41948dedb4cb4766f63ada989f, type: 3}
   - {fileID: 4999268336617910825, guid: bdf4863b0e39abb41b5f135de1a82866, type: 3}
   pathPrefab: {fileID: 2012655870129681675, guid: 3283373b72db5a04d85c3945d60fcd1a, type: 3}
   moveSpeed: 10
