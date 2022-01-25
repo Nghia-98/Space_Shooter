@@ -13,7 +13,6 @@ public class WaveConfigSO : ScriptableObject {
     [SerializeField] float spawnTimeVariance = 0f;
     [SerializeField] float minimumSpawnTime = 0.2f;
 
-
     public int GetEnemyCount() {
         return enemyPrefabs.Count;
     }
@@ -21,7 +20,6 @@ public class WaveConfigSO : ScriptableObject {
     public GameObject GetEnemyPrefab(int index) {
         return enemyPrefabs[index];
     }
-
 
     public Transform GetStartingWaypoint() {
         return pathPrefab.GetChild(0);

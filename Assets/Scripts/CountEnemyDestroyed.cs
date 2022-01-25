@@ -5,19 +5,23 @@ using UnityEngine;
 public class CountEnemyDestroyed : MonoBehaviour {
     LevelManager levelManager;
     EnemySpawner enemySpawner;
+    BossSpawner bossSpawner;
     GameObject[] enemyClone;
 
     [SerializeField] bool isFinalLevel = false;
+    bool isCreatedBoss = false;
 
 
     // If number of enemy has been destroyed = max of number enemy spawner
     // => Load GoNextLevel Scene
-    [SerializeField] int maxOfEnemySpawner = 20;
+    [SerializeField] int maxOfEnemySpawner = 40;
+    //[SerializeField] int numEnemySpawnerBeforeBoss = 40;
     int numOfEnemyDestroyed = 0;
 
     void Awake() {
         levelManager = FindObjectOfType<LevelManager>();
         enemySpawner = FindObjectOfType<EnemySpawner>();
+        bossSpawner = FindObjectOfType<BossSpawner>();
     }
 
     public void increateNumEnemyDestroyed() {
@@ -44,6 +48,13 @@ public class CountEnemyDestroyed : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         enemyClone = GameObject.FindGameObjectsWithTag("enemyClone");
+
+        // Spawn A Boss when enough enemies had destroyed
+        if (numOfEnemyDestroyed == maxOfEnemySpawner && !isCreatedBoss) {
+            isCreatedBoss = true;
+            Debug.Log("Boss Spawn");
+            bossSpawner.SpawnBoss();
+        }
 
         if (numOfEnemyDestroyed >= maxOfEnemySpawner) {
 
