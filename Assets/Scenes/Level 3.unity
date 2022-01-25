@@ -993,6 +993,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1654002511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1654002512}
+  - component: {fileID: 1654002513}
+  m_Layer: 0
+  m_Name: ItemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1654002512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654002511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1654002513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654002511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0888deb65d26932449e5211128d77aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveConfigs:
+  - {fileID: 11400000, guid: d37169b281e691b4dbd9c0aceaea6b89, type: 2}
+  - {fileID: 11400000, guid: 7911a6d2177299c48ab3efc4baa184ee, type: 2}
+  timeBetweenWaves: 15
+  isLooping: 1
 --- !u!1 &1672826647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8245209059392552119, guid: d4d95051d7560a74dba769da06838d28, type: 3}
       propertyPath: maxOfEnemySpawner
-      value: 40
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8245209059392552119, guid: d4d95051d7560a74dba769da06838d28, type: 3}
       propertyPath: numEnemySpawnerBeforeBoss
@@ -1726,6 +1774,10 @@ PrefabInstance:
       propertyPath: paddingTop
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 173800693, guid: d2885b8fe024316449193f308ae7b271, type: 3}
+      propertyPath: newSpriteSpaceShip
+      value: 
+      objectReference: {fileID: 21300000, guid: 5de12f27c11cb6643b54b3902ad030ff, type: 3}
     - target: {fileID: 926195871265566840, guid: d2885b8fe024316449193f308ae7b271, type: 3}
       propertyPath: health
       value: 300

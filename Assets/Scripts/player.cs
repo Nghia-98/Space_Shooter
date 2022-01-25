@@ -13,6 +13,7 @@ public class player : MonoBehaviour {
     [SerializeField] float paddingRight;
     [SerializeField] float paddingTop;
     [SerializeField] float paddingBottom;
+    [SerializeField] Sprite newSpriteSpaceShip;
 
     Shooter shooter;
 

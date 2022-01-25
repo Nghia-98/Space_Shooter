@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e354dc145568a4095a091b4a0e1025, type: 3}
+  m_Name: Wave Health 1
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 712936336764654147, guid: 2db564b548217294b9036a8f3aceee9f, type: 3}
+  - {fileID: 5374583154029526641, guid: 9fd8269852efbec488c831f8567b8c6e, type: 3}
+  - {fileID: 6349743264460234010, guid: dc0920db31094c143993c5e1c39827a5, type: 3}
+  - {fileID: 5303907112760027308, guid: 0b45f68de3adbb041b127c4c7aaa1687, type: 3}
+  pathPrefab: {fileID: 3008664877528771262, guid: 395951394b40ed0429faacd471c55fd5, type: 3}
+  moveSpeed: 2
+  timeBetweenEnemySpawns: 1
+  spawnTimeVariance: 1
+  minimumSpawnTime: 0.2
