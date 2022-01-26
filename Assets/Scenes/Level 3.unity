@@ -1098,6 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveConfigs:
+  - {fileID: 11400000, guid: 7911a6d2177299c48ab3efc4baa184ee, type: 2}
   - {fileID: 11400000, guid: d37169b281e691b4dbd9c0aceaea6b89, type: 2}
   timeBetweenWaves: 15
   isLooping: 1
@@ -1652,63 +1653,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4d95051d7560a74dba769da06838d28, type: 3}
---- !u!1001 &1181913520041503562
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5764482
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.06111124
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.2517414
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771262, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008664877528771263, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
-      propertyPath: m_Name
-      value: Path Health 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 440e36190c889bf4aaa36152df130e9a, type: 3}
 --- !u!1001 &2434149738945445769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1887,6 +1831,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4342728431034023355, guid: d2885b8fe024316449193f308ae7b271, type: 3}
+      propertyPath: newProjectilePrefab
+      value: 
+      objectReference: {fileID: 1948386883306096255, guid: b0e8f3d4715a6a645b10ebaaedd3dad9, type: 3}
     - target: {fileID: 173800693, guid: d2885b8fe024316449193f308ae7b271, type: 3}
       propertyPath: paddingTop
       value: 6
@@ -1902,6 +1850,10 @@ PrefabInstance:
     - target: {fileID: 926195871265566840, guid: d2885b8fe024316449193f308ae7b271, type: 3}
       propertyPath: health
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677978443330916130, guid: d2885b8fe024316449193f308ae7b271, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3522370673329405310, guid: d2885b8fe024316449193f308ae7b271, type: 3}
       propertyPath: m_RootOrder

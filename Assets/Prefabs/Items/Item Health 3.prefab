@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 712936336764654145}
   - component: {fileID: 712936336764654146}
   - component: {fileID: 8750354111438853589}
+  - component: {fileID: 7055974136997433517}
   m_Layer: 7
   m_Name: Item Health 3
   m_TagString: Untagged
@@ -163,5 +164,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e784d4aa9f674548a8bf38bf0e9d854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7055974136997433517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712936336764654147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78181677eeb5a14eb27c7c3775be128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

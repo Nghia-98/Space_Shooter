@@ -14,12 +14,14 @@ public class player : MonoBehaviour {
     [SerializeField] float paddingTop;
     [SerializeField] float paddingBottom;
     [SerializeField] Sprite newSpriteSpaceShip;
+    SpriteRenderer spriteRenderer;
 
     Shooter shooter;
     [SerializeField] Health playerHealth;
 
     void Awake() {
         shooter = GetComponent<Shooter>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
 
@@ -61,8 +63,21 @@ public class player : MonoBehaviour {
 
         if (pathFinderItems != null) {
             Debug.Log("Hit gameObj: " + other.name);
-            playerHealth.ResetHealth();
             Destroy(other.gameObject);
+
+            if (other.GetComponent<itemHealth>() != null) {
+                playerHealth.ResetHealth();
+            }
+
+            if (other.GetComponent<itemPower>() != null) {
+                if (spriteRenderer.sprite != newSpriteSpaceShip) {
+                    spriteRenderer.sprite = newSpriteSpaceShip;
+                }
+            }
+
+            if (other.GetComponent<itemPowerLazer>() != null) {
+                shooter.changeNewProjectTile();
+            }
         }
     }
 }
