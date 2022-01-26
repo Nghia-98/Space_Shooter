@@ -5,7 +5,9 @@ using UnityEngine;
 public class Shooter : MonoBehaviour {
 
     [Header("General")]
+    GameObject lazerPrefab;
     [SerializeField] GameObject projectilePrefab;
+    [SerializeField] GameObject newProjectilePrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileLifetime = 5f;
     [SerializeField] float baseFiringRate = 0.2f;
@@ -23,16 +25,21 @@ public class Shooter : MonoBehaviour {
 
     void Awake() {
         audioPlayer = FindObjectOfType<AudioPlayer>();
+        lazerPrefab = projectilePrefab;
     }
 
     void Start() {
-        if(useAI == true) {
+        if (useAI == true) {
             isFiring = true;
         }
     }
 
     void Update() {
         Fire();
+    }
+
+    public void changeNewProjectTile() {
+        lazerPrefab = newProjectilePrefab;
     }
 
     void Fire() {
@@ -47,7 +54,7 @@ public class Shooter : MonoBehaviour {
 
     IEnumerator FireContinuously() {
         while (true) {
-            GameObject instance = Instantiate(projectilePrefab,
+            GameObject instance = Instantiate(lazerPrefab,
                                             transform.position,
                                             Quaternion.identity);
 

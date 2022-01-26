@@ -13,11 +13,15 @@ public class player : MonoBehaviour {
     [SerializeField] float paddingRight;
     [SerializeField] float paddingTop;
     [SerializeField] float paddingBottom;
+    [SerializeField] Sprite newSpriteSpaceShip;
+    SpriteRenderer spriteRenderer;
 
     Shooter shooter;
+    [SerializeField] Health playerHealth;
 
     void Awake() {
         shooter = GetComponent<Shooter>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
 
@@ -51,6 +55,29 @@ public class player : MonoBehaviour {
     void OnFire(InputValue value) {
         if (shooter != null) {
             shooter.isFiring = value.isPressed;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        PathFinderItems pathFinderItems = other.GetComponent<PathFinderItems>();
+
+        if (pathFinderItems != null) {
+            Debug.Log("Hit gameObj: " + other.name);
+            Destroy(other.gameObject);
+
+            if (other.GetComponent<itemHealth>() != null) {
+                playerHealth.ResetHealth();
+            }
+
+            if (other.GetComponent<itemPower>() != null) {
+                if (spriteRenderer.sprite != newSpriteSpaceShip) {
+                    spriteRenderer.sprite = newSpriteSpaceShip;
+                }
+            }
+
+            if (other.GetComponent<itemPowerLazer>() != null) {
+                shooter.changeNewProjectTile();
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour {
 
     [SerializeField] bool isPlayer;
-    [SerializeField] int health = 50;
+    [SerializeField] int health = 300;
     [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitEffect;
 
@@ -18,6 +18,11 @@ public class Health : MonoBehaviour {
 
     public int GetHealth() {
         return health;
+    }
+
+    public void ResetHealth() {
+        health = 300;
+        Debug.Log("Health reset to 300");
     }
 
     void Awake() {
@@ -42,7 +47,7 @@ public class Health : MonoBehaviour {
     void TakeDamage(int damage) {
         health -= damage;
 
-        if (health <=0 ) {
+        if (health <= 0) {
             Die();
         }
     }
