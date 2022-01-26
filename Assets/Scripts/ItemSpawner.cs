@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemSpawner : MonoBehaviour {
 
     [SerializeField] List<WaveConfigSO> waveConfigs;
-    [SerializeField] float timeBetweenWaves = 15f;
+    [SerializeField] float timeBetweenWaves = 7f;
     [SerializeField] bool isLooping;
     WaveConfigSO currentItemWave;
  

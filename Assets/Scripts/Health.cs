@@ -22,6 +22,7 @@ public class Health : MonoBehaviour {
 
     public void ResetHealth() {
         health = 300;
+        Debug.Log("Health reset to 300");
     }
 
     void Awake() {
@@ -46,7 +47,7 @@ public class Health : MonoBehaviour {
     void TakeDamage(int damage) {
         health -= damage;
 
-        if (health <=0 ) {
+        if (health <= 0) {
             Die();
         }
     }

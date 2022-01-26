@@ -16,6 +16,7 @@ public class player : MonoBehaviour {
     [SerializeField] Sprite newSpriteSpaceShip;
 
     Shooter shooter;
+    [SerializeField] Health playerHealth;
 
     void Awake() {
         shooter = GetComponent<Shooter>();
@@ -52,6 +53,16 @@ public class player : MonoBehaviour {
     void OnFire(InputValue value) {
         if (shooter != null) {
             shooter.isFiring = value.isPressed;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        PathFinderItems pathFinderItems = other.GetComponent<PathFinderItems>();
+
+        if (pathFinderItems != null) {
+            Debug.Log("Hit gameObj: " + other.name);
+            playerHealth.ResetHealth();
+            Destroy(other.gameObject);
         }
     }
 }
